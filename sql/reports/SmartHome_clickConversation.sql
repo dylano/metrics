@@ -12,7 +12,7 @@ SELECT [CD-SH-DeviceID], hittimestamp, (
 		WHEN eventAction = 'longpress' 
 		THEN .2
 		ELSE 0 
-	END ) AS plotline, 
+	END ) AS plotline,   -- assign a Y-value to each device/click combo in order to scatterplot
 	CASE 
 		WHEN eventAction = 'click' 
 		THEN 'Rainbow' 
